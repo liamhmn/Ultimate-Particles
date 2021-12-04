@@ -10,7 +10,7 @@ function level_11() {
       }
       screenSizeSpan(Math.max(1-0.005*levelLoopCount, 0.6), 10, 50);
       levelTasks.activate(0);
-    }, time: tickSpeed*100, activated: false},
+    }, time: tickSpeed*10000000, activated: false},
   ]);
 
   levelTasks = new Task([
