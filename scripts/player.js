@@ -38,7 +38,7 @@ function updatePlayer() {
         switch (particles[j].type) {
           case "enemy":
           particles[i].hp -= particles[j].atk*levelSettings.atkMult;
-          if (particles[i].hp <= -1) {
+          if (particles[i].hp < -10) {
             playerDead();
             return;
           } else {
