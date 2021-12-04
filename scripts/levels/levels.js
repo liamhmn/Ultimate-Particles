@@ -10,7 +10,7 @@ function level_11() {
       }
       screenSizeSpan(Math.max(1-0.005*levelLoopCount, 0.6), 10, 50);
       levelTasks.activate(0);
-    }, time: tickSpeed*10000000, activated: false},
+    }, time: tickSpeed*1000, activated: false},
   ]);
 
   levelTasks = new Task([
@@ -100,7 +100,7 @@ function level_22() {
       var dist = 1.2;
       for (var i = 0; i < 10+Math.sqrt(levelLoopCount)/3; i++) {
         var deg = Math.random()*360;
-        particles[`P${levelLoopCount}S${i}`] = new Particle({'color': hsvToRgb(levelLoopCount*(0.001*(levelLoopCount/30+1)), 0.8, 0.5), 'speed': 0.5, 'moveType': ['circle']}).moveTo([Math.sin(Math.rad(deg))*dist, -Math.cos(Math.rad(deg))*dist]);
+        particles[`P${levelLoopCount}S${i}`] = new Particle({'color': hsvToRgb(levelLoopCount*(0.001*(levelLoopCount/30+1)), 0.8, 0.5), 'speed': 100.5, 'moveType': ['circle']}).moveTo([Math.sin(Math.rad(deg))*dist, -Math.cos(Math.rad(deg))*dist]);
       }
       if (levelLoopCount > 1) {
         for (var i = 0; i < 10+Math.sqrt(levelLoopCount)/5; i++) {
@@ -123,7 +123,7 @@ function level_22() {
     levelFunctions.activate(0);
   }, tickSpeed*100);
 
-  particles['player'] = new Particle({'type': 'player', 'color': '#f00', 'hp': 15});
+  particles['player'] = new Particle({'type': 'player', 'color': '#f00', 'hp': 1000005});
   particles['text'] = new Particle({'type': 'text', 'absSize': 0.17, 'text': 'circle!', 'color': '#c49b29', 'zIndex': 1})
   //levelTasks.activateAll();
 }
