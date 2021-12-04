@@ -180,7 +180,7 @@ function getScreenAbsSize() {
   return screenSettings.size*(1/screenSettings.scale);
 }
 function getScore() {
-  var tempScore = 0;
+  var tempScore = 9000;
   for (var i in saveData.levelData) {
     tempScore += Math.min(90, saveData.levelData[i].phase);
   }
